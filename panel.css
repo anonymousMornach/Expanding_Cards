@@ -1,0 +1,40 @@
+.panel_container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel_item {
+  cursor: pointer;
+  flex: 0.5;
+  transition: flex 0.7s ease-in;
+}
+
+.panel_item .panel_content {
+  opacity: 0;
+}
+.panel_item .panel_placeholder {
+  opacity: 1;
+}
+
+.panel_item.active_panel {
+  flex: 5;
+}
+.panel_item.active_panel .panel_placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+.panel_item.active_panel .panel_content {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .panel_container {
+    width: 100vw;
+  }
+
+  .panel_item:nth-of-type(4),
+  .panel_item:nth-of-type(5) {
+    display: none;
+  }
+}
