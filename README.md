@@ -56,6 +56,28 @@ To use simply add the external stylesheet "panel.css" inside the head element an
     <link rel="stylesheet" href="panel.css" />
   </head>
   <body>
+    <!-- Container element containing all panels -->
+    <div class="panel_container">
+      <!-- Individual Panel items is labelled with the .panel_item class.
+      The current active panel is labelled with the .active_panel class.
+      The placeholder on panel before expansion is labelled with the .panel_placeholder class.
+      -->
+      <div
+        class="panel_item panel_placeholder active_panel"
+        style="background-color:blue"
+      >
+        <h3 class="panel_content">Expand</h3>
+      </div>
+      <div class="panel_item" style="background-color:green">
+        <h3 class="panel_content">Expand</h3>
+      </div>
+      <div class="panel_item" style="background-color:red">
+        <h3 class="panel_content">Expand</h3>
+      </div>
+      <div class="panel_item" style="background-color:green">
+        <h3 class="panel_content">Expand</h3>
+      </div>
+    </div>
     <script src="panel.js"></script>
   </body>
 </html>
